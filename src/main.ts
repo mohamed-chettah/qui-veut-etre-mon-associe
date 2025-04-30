@@ -10,6 +10,9 @@ import rateLimit from 'express-rate-limit';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // Préfixe d'API
+  app.setGlobalPrefix('api');
+
   // Validation globale
   app.useGlobalPipes(new ValidationPipe());
   

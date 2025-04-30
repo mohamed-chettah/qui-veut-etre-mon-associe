@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany, JoinTable } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany, JoinTable, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { Project } from '../../projects/entities/project.entity';
 import { Investment } from '../../investments/entities/investment.entity';
 import { Interest } from '../../interests/entities/interest.entity';
@@ -37,4 +37,10 @@ export class User {
   @ManyToMany(() => Interest)
   @JoinTable()
   interests: Interest[];
+
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
 } 
