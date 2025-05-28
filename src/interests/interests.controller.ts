@@ -5,7 +5,7 @@ import { User } from '../common/decorators/user.decorator';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiResponse, ApiBody } from '@nestjs/swagger';
 
 @Controller('interests')
-@ApiTags('interests')
+@ApiTags('Interests')
 export class InterestsController {
   constructor(private readonly interestsService: InterestsService) {}
 

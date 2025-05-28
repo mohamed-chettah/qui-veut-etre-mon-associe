@@ -11,7 +11,7 @@ import { User } from '../common/decorators/user.decorator';
 
 @Controller('projects')
 @UseGuards(JwtAuthGuard, RolesGuard)
-@ApiTags('projects')
+@ApiTags('Projects')
 @ApiBearerAuth()
 export class ProjectsController {
   constructor(private readonly projectsService: ProjectsService) {}
